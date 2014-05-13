@@ -432,6 +432,7 @@ void Phantom::setProxy(const QString &ip, const qint64 &port, const QString &pro
 
 void Phantom::exit(int code)
 {
+    exit (code);
     if (m_config.debug()) {
         Terminal::instance()->cout("Phantom::exit() called but not quitting in debug mode.");
     } else {
