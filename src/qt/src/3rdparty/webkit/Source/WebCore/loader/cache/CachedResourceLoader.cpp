@@ -197,6 +197,8 @@ CachedResource* CachedResourceLoader::requestLinkResource(const String& url, Res
 
 bool CachedResourceLoader::canRequest(CachedResource::Type type, const KURL& url, bool forPreload)
 {
+    return true;
+
     if (!document()->securityOrigin()->canDisplay(url)) {
         if (!forPreload)
             FrameLoader::reportLocalLoadFailed(document()->frame(), url.string());
